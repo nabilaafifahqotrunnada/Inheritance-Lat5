@@ -1,0 +1,29 @@
+package lat5;
+
+/**
+ *
+ * @author nabila
+ */
+public class MountainTruck extends Truck {
+    public int seatHeight;
+    public MountainTruck(int startCadence, int startSpeed, int startGear, int startHeight) {
+        super(startCadence, startSpeed, startGear);
+        seatHeight = startHeight;
+    }
+    public void setHeight(int newValue) {
+        seatHeight = newValue;
+    }
+    public static void main(String[] me) {
+        System.out.println("Start");
+        MountainTruck MB = new MountainTruck(0,0,0,0);
+        System.out.println("Gear = " + MB.gear);
+        System.out.println("Speed = " + MB.speed);
+        MB.setGear(2);
+        MB.setSpeed(2);
+        System.out.println("Gear = " + MB.gear);
+        System.out.println("Speed = " + MB.speed);
+        MB.speedUp(2);
+        System.out.println("Gear = " + MB.gear);
+        System.out.println("Speed = " + MB.speed);
+    }
+}
